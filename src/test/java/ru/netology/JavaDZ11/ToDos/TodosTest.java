@@ -71,16 +71,19 @@ public class TodosTest {
         Task[] actual = todos.search("Приложение НетоБанка");
         Assertions.assertArrayEquals(expected, actual);
     }
+
     @Test
     public void shouldSearchIncorrectRequest() {
         Task[] expected = {};
         Task[] actual = todos.search("Сыр");
         Assertions.assertArrayEquals(expected, actual);
     }
+
     @Test
     public void shouldShowAllNotEmptyToDosList() {
         Task[] expected = {simpleTask, epic, meeting};
         Task[] actual = todos.search("");
         Assertions.assertArrayEquals(expected, actual);
     }
+
 }

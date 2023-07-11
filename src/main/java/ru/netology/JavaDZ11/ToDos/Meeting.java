@@ -1,5 +1,6 @@
 package ru.netology.JavaDZ11.ToDos;
-public class Meeting extends Task{
+
+public class Meeting extends Task {
     protected String topic;
     protected String project;
     protected String start;
@@ -22,6 +23,7 @@ public class Meeting extends Task{
     public String getStart() {
         return start;
     }
+
     @Override
     public boolean matches(String query) {
         if (topic.contains(query)) {
